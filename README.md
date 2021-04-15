@@ -42,8 +42,8 @@
   RoundedRectangle(cornerRadius: 50)
       .ignoresSafeArea(.all)
   ```
-[![Image](https://github.com/GREENOVER/SwiftUI/blob/main/InXcode.png)]
-[![Image](https://github.com/GREENOVER/SwiftUI/blob/main/InSimulator.png)]
+![Image](https://github.com/GREENOVER/SwiftUI/blob/main/InXcode.png){: width="100" height="100"}
+![Image](https://github.com/GREENOVER/SwiftUI/blob/main/InSimulator.png){: width="100" height="100"}
 - 원인: return 키워드는 생략된것이지 하나만 존재해야하는데 안보인다고 SwiftUI에서는 없구나 라고 생각을하여 스택안에 텍스트를 넣고 여러 요소들을 배치해야했었다. 그런데 이걸 전부 빼버린다면 전부의 요소에 return 키워드가 생략이 되었지만 붙어있는것이다. 이걸 Xcode는 어떤 뷰를 리턴해줄지 혼동이 와 여러뷰가 뷰 영역에서 잡히는는것이다. 또한 시뮬레이터를 구동시켰을때 이 여러 리턴값이 붙어있는 뷰를 튜플뷰로 판단하여 기본적으로 VStack처럼 위에서부터 순서대로 표현했던것이다.
 - 해결방법: 아래 코드와 값이 원하는 VStack안에 해당 요소들을 전부 넣어줌으로 튜플뷰를 없애고 혼동을 피해줄 수 있다.
   ```Swift
@@ -68,6 +68,6 @@
 ##### 2)
 - 문제점: 1번 문제와 같이 튜플뷰로 강제적으로 주어질때 만약 Color요소가 사용되어 배경색이던 어떤것이던 칠해지게된다면 1번의 이미지와 같이 사이 공백이 나타나게된다.
 - 원인: 아직 딱 뚜렷한 원인을 찾지 못하고 계속 참고하고 있지만 아마 추측하자면 튜플뷰로 구성되었을때 Color요소가 들어간것만 사이 공백이 주어지고 텍스트는 사이 공백이 주어지지 않는것으로 봐서 Color요소의 공백을 없애려면 ignoreSafeArea의 사용대신 Color의 사이즈 및 프레임을 조정해줘야될것같다.
-- 해결책: 여러 해결책을 찾으려 서핑하다 좀 적용될 수 있는 부분의 링크를 가져와보았다. 아직 미완성인채로.. 해결이 되면 다시 공유할 예정! (아래 링크의 마지막 Color as a View 부분을 보면된다.)
-[SwiftUI TupleView Trouble](https://troz.net/post/2020/swiftui-color/)
+- 해결책: 여러 해결책을 찾으려 서핑하다 좀 적용될 수 있는 부분의 링크를 가져와보았다. 아직 미완성인채로.. 해결이 되면 다시 공유할 예정! (아래 링크의 마지막 Color as a View 부분을 보면된다.)   
+  [SwiftUI TupleView Trouble](https://troz.net/post/2020/swiftui-color/)
 
