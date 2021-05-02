@@ -1,5 +1,5 @@
 # SwiftUI Exercise Project
-### SwiftUI에 대해 학습하고 기본적인 시도와 계산기 UI를 구현해본 연습 프로젝트
+### SwiftUI에 대해 학습하고 기본적인 시도와 계산기 UI를 구현해본 프로젝트
 [TIL for SwiftUI](https://github.com/GREENOVER/Today-I-Learned/blob/master/2021/TIL_2021.04.14.md)
 ***
 #### What I learned✍️
